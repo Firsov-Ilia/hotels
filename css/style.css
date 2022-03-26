@@ -1,0 +1,935 @@
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 300;
+  src: local('MullerLight'), local('Muller Light'),
+       url('../font/MullerLight.woff') format('woff'),
+       url('../font/MullerLight.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 400;
+  src: local('MullerRegular'), local('Muller Regular'),
+       url('../font/MullerRegular.woff') format('woff'),
+       url('../font/MullerRegular.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 500;
+  src: local('MullerMedium'), local('Muller Medium'),
+       url('../font/MullerMedium.woff') format('woff'),
+       url('../font/MullerMedium.woff2') format('woff2')
+}
+
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+  font-weight: 700;
+  src: local('MullerBold'), local('Muller Bold'),
+       url('../font/MullerBold.woff') format('woff'),
+       url('../font/MullerBold.woff2') format('woff2')
+}
+
+:root {
+  /* Типографика */
+  --color-orange: #cc9933;
+  --color-white: #fff;
+
+  /* Оформление */
+  --background-color-orange: #cc9933;
+  --background-color-white: #fff;
+}
+
+* {
+  /* Блочная модель */
+  box-sizing: border-box;
+}
+
+a {
+  /* Типографика */
+  text-decoration: none;
+
+  /* Анимации */
+  transition-duration: color;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+a:hover {
+  /* Типографика */
+  color: #00d8ff;
+
+  /* Анимации */
+  cursor: pointer;
+}
+
+button:hover {
+  /* Анимации */
+  cursor: pointer;
+}
+
+ul {
+  /* Блочная модель */
+  margin: 0;
+  padding: 0;
+
+  /* Оформление */
+  list-style: none;
+}
+
+img {
+  /* Блочная модель */
+  max-width: 100%;
+}
+
+input {
+  /* Блочная модель */
+  padding: 0;
+  border: 0;
+  border-radius: 12px;
+}
+
+html {
+  /* Типографика */
+  font-family: 'Muller', sans-serif;
+
+  /* Оформление */
+  background-color: #f1f1f1;
+}
+
+.header-top {
+  /* Блочная модель */
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.logo {
+  /* Блочная модель */
+  margin-right: 25px;
+  max-height: 54px;
+}
+
+.header-phone {
+  /* Блочная модель */
+  margin-right: auto;
+
+  /* Типографика */
+  font-size: 22px;
+  font-weight: 600;
+  color: #666;
+}
+
+.header-account {
+  /* Блочная модель */
+  margin-right: 10px;
+  padding-left: 20px;
+
+  /* Типографика */
+  color: #cc9933;
+
+  /* Оформление */
+  background-image: url('../img/account.png');
+  background-repeat: no-repeat;
+}
+
+.header-bottom {
+  /* Блочная модель */
+  display: flex;
+  align-items: center;
+  height: 70px;
+  border-radius: 12px;
+}
+
+.nav {
+  /* Блочная модель */
+  margin-right: auto;
+}
+
+.nav-list {
+  /* Блочная модель */
+  display: flex;
+  margin-left: 21px;
+}
+
+.nav-item:not(:last-child) {
+  /* Блочная модель */
+  margin-right: 45px;
+}
+
+.nav-link {
+  /* Типографика */
+  color: #333;
+}
+
+.header-form {
+  /* Позиционирование */
+  position: relative;
+}
+
+.input {
+  /* Блочная модель */
+  width: 355px;
+  height: 48px;
+  margin-right: 21px;
+  padding-left: 21px;
+
+  /* Оформление */
+  background-color: #f1f1f1;
+}
+
+.button {
+  /* Позиционирование */
+  position: absolute;
+  top: 13px;
+  left: 312px;
+
+  /* Блочная модель */
+  margin: 0;
+  padding: 0;
+  width: 22px;
+  height: 22px;
+  border: 0;
+
+  /* Оформление */
+  background-image: url('../img/search.png');
+  background-repeat: no-repeat;
+}
+
+/* Секция Бронь и спецпредлжение */
+.main-title {
+  /* Блочная модель */
+  margin: 72px 0 24px 45px;
+
+  /* Типографика */
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.section-booking-input {
+  /* Блочная модель */
+  width: 568px;
+  height: 70px;
+  margin-bottom: 24px;
+  padding-left: 21px;
+}
+
+.section-booking-all {
+  /* Блочная модель */
+  display: flex;
+  align-items: center;
+}
+
+.section-booking-btn {
+  /* Блочная модель */
+  width: 159px;
+  height: 70px;
+  padding: 27px 28px;
+  border-radius: 12px;
+
+  /* Типографика */
+  color: #fff;
+  font-weight: 700;
+}
+
+.section-booking-btn:hover {
+  /* Анимации */
+  transform: translateY(10px);
+}
+
+.section-booking-text {
+  /* Блочная модель */
+  margin-left: 30px;
+
+  /* Типографика */
+  color: #999;
+}
+
+.section-booking-quantity {
+  /* Типографика */
+  color: #cc9933;
+  font-weight: 500;
+}
+
+.section-booking-img {
+  /* Позиционирование */
+  position: absolute;
+}
+
+.section-booking-text-2 {
+  /* Позиционирование */
+  position: relative;
+
+  /* Блочная модель */
+  margin-top: 240px;
+  margin-left: 45px;
+}
+
+.title {
+  /* Блочная модель */
+  width: 320px;
+  margin-bottom: 40px;
+
+  /* Типографика */
+  font-size: 55px;
+  font-weight: 700;
+}
+
+.section-booking-price {
+  /* Блочная модель */
+  display: inline-block;
+  margin: 0;
+
+  /* Типографика */
+  font-size: 35px;
+  color: #948b85;
+}
+
+.section-booking-more {
+  /* Блочная модель */
+  display: inline-block;
+}
+
+.section-booking-link {
+  /* Блочная модель */
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.section-booking-link:hover span {
+  /* Оформление */
+  background-image: url('../img/more2.png');
+  background-repeat: no-repeat;
+}
+
+.section-booking-icon {
+  /* Блочная модель */
+  width: 9px;
+  height: 16px;
+  margin-left: 5px;
+
+  /* Оформление */
+  background-image: url('../img/more.png');
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  /* Анимация */
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+/* Секция О нас */
+.section-about-text {
+  /* Блочная модель */
+  width: 885px;
+  margin-left: 45px;
+  line-height: 32px;
+
+  /* Типографика */
+  color: #666;
+}
+
+/* Секция Услуги */
+.section-services-list {
+  /* Блочная модель */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.section-services-item {
+  /* Блочная модель */
+  height: 325px;
+  border-radius: 12px;
+}
+
+.section-services-item:nth-child(-n+2) {
+  /* Блочная модель */
+  margin-bottom: 30px;
+}
+
+.section-services-block {
+  /* Блочная модель */
+  margin-top: 30px;
+  margin-left: 45px;
+}
+
+.section-services-link {
+  /* Блочная модель */
+  display: flex;
+  align-items: center;
+
+  /* Типографика */
+  font-size: 22px;
+  font-weight: 500;
+
+  /* Анимации */
+  transition-duration: color;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+.section-services-link:hover span {
+  /* Оформление */
+  background-image: url('../img/more2.png');
+
+  /* Анимации */
+  transform: translateX(5px);
+}
+
+.section-services-icon {
+  /* Блочная модель */
+  display: inline-block;
+  width: 9px;
+  height: 16px;
+  margin-left: 10px;
+
+  /* Оформление */
+  background-image: url('../img/more.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  /* Анимации */
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+.section-services-text {
+  /* Блочная модель */
+  margin-top: 10px;
+  width: 395px;
+  line-height: 32px;
+}
+
+/* Секция Преимущества */
+.section-advantages-list {
+  /* Блочная модель */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.section-advantages-item {
+  /* Блочная модель */
+  height: 275px;
+  border-radius: 12px;
+}
+
+.section-advantages-item:nth-child(-n+4) {
+  /* Блочная модель */
+  margin-bottom: 30px;
+}
+
+.section-advantages-icon {
+  /* Блочная модель */
+  width: 23%;
+  height: 23%;
+  margin-top: 44px;
+  margin-left: 44px;
+  display: inline-block;
+
+  /* Оформление */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+
+.section-advantages-image-1 {
+  /* Оформление */
+  background-image: url('../img/image1.png');
+}
+
+.section-advantages-image-2 {
+  /* Оформление */
+  background-image: url('../img/image2.png');
+}
+
+.section-advantages-image-3 {
+  /* Оформление */
+  background-image: url('../img/image3.png');
+}
+
+.section-advantages-image-4 {
+  /* Оформление */
+  background-image: url('../img/image4.png');
+}
+
+.section-advantages-image-5 {
+  /* Оформление */
+  background-image: url('../img/image5.png');
+}
+
+.section-advantages-image-6 {
+  /* Оформление */
+  background-image: url('../img/image6.png');
+}
+
+.section-advantages-image-7 {
+  /* Оформление */
+  background-image: url('../img/image7.png');
+}
+
+.section-advantages-image-8 {
+  /* Оформление */
+  background-image: url('../img/image8.png');
+}
+
+.section-advantages-text {
+  /* Блочная модель */
+  width: 190px;
+  margin-top: 10px;
+  margin-left: 45px;
+  line-height: 32px;
+}
+
+/* Секция Размещение */
+.section-accommodation-list {
+  /* Блочная модель */
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.section-accommodation-item {
+  /* Блочная модель */
+  height: 441px;
+  border-radius: 12px;
+}
+
+.section-accommodation-item:nth-child(-n+6) {
+  /* Блочная модель */
+  margin-bottom: 30px;
+}
+
+.section-accommodation-description {
+  /* Блочная модель */
+  margin-top: 30px;
+  margin-left: 45px;
+}
+
+.section-accommodation-text {
+  /* Блочная модель */
+  display: inline-block;
+  margin: 0;
+  margin-right: 35px;
+}
+
+.section-accommodation-from {
+  /* Типографика */
+  color: #a4a4a4;
+}
+
+.section-accommodation-price {
+  /* Типографика */
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.section-accommodation-star {
+  /* Блочная модель */
+  margin-right: 5px;
+}
+
+.section-accommodation-text-2 {
+  /* Типографика */
+  font-weight: 500;
+}
+
+.section-accommodation-text-3 {
+  /* Блочная модель */
+  margin-bottom: 20px;
+
+  /* Типографика */
+  color: #a4a4a4;
+}
+
+.section-accommodation-link {
+  /* Блочная модель */
+  display: block;
+  width: 100px;
+  height: 41px;
+  padding: 11px 20px;
+  border: 1px solid  #cc9933;
+  border-radius: 12px;
+
+  /* Типографика */
+  font-weight: 700;
+
+  /* Оформление */
+  background-color: #fff;
+}
+
+.section-accommodation-link:hover {
+  /* Блочная модель */
+  border: 1px solid  #00d8ff;
+}
+
+.section-accommodation-image-absolute {
+  /* Позиционирование */
+  position: absolute;
+}
+
+.section-accommodation-all {
+  /* Позиционирование */
+  position: relative;
+  top: 365px;
+
+  /* Блочная модель */
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+
+  /* Типографика */
+  font-size: 22px;
+  font-weight: 500;
+
+  /* Анимации */
+  transition-duration: color;
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+.section-accommodation-all:hover span {
+  /* Оформление */
+  background-image: url('../img/all_option2.png');
+  background-repeat: no-repeat;
+
+  /* Анимации */
+  transform: translateX(5px);
+}
+
+.section-accommodation-icon {
+  /* Блочная модель */
+  display: inline-block;
+  margin-left: 10px;
+  width: 9px;
+  height: 16px;
+
+  /* Оформление */
+  background-image: url('../img/all_option.png');
+  background-repeat: no-repeat;
+
+  /* Анимации */
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+/* Секция Контакты */
+.section-form {
+  /* Блочная модель */
+  margin-bottom: 22px;
+}
+
+.section-form-container {
+  /* Блочная модель */
+  display: flex;
+  align-items: center;
+}
+
+.section-contacts-block {
+  /* Блочная модель */
+  margin-right: 178px;
+  padding: 44px;
+  width: 469px;
+  border-radius: 12px;
+}
+
+.section-contacts-address {
+  /* Блочная модель */
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-bottom: 28px;
+  border-bottom: solid 1px #ccc;
+}
+
+.section-contacts-title {
+  /* Блочная модель */
+  margin: 0;
+  margin-right: auto;
+
+  /* Типографика */
+  color: #666;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.section-contacts-address-text {
+  /* Позиционирование */
+  transform: translateY(10px);
+
+  /* Блочная модель */
+  width: 227px;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.section-contacts-phone {
+  /* Блочная модель */
+  display: flex;
+  margin-bottom: 24px;
+  padding-bottom: 28px;
+  border-bottom: solid 1px #ccc;
+}
+
+.section-contacts-phone-block {
+  /* Блочная модель */
+  width: 155px;
+  margin-right: 85px;
+}
+
+.section-contacts-mail {
+  /* Блочная модель */
+  display: flex;
+  margin-bottom: 24px;
+  padding-bottom: 28px;
+  border-bottom: solid 1px #ccc;
+}
+
+.section-contacts-mail-block {
+  /* Блочная модель */
+  width: 227px;
+  margin-right: 10px;
+}
+
+.section-contacts-mail-text {
+  /* Типографика */
+  color: #999;
+}
+
+.section-contacts-schedule {
+  /* Блочная модель */
+  display: flex;
+  margin-bottom: 24px;
+  padding-bottom: 28px;
+  border-bottom: solid 1px #ccc;
+}
+
+.section-contacts-schedule-text {
+  /* Блочная модель */
+  width: 190px;
+  margin: 0;
+  margin-right: 50px;
+}
+
+.section-contacts-btn {
+  /* Блочная модель */
+  width: 214px;
+  height: 70px;
+  border-radius: 12px;
+  border: solid 1px #cc9933;
+
+  /* Типографика */
+  font-weight: 700;
+
+  /* Оформление */
+  background-color: #fff;
+
+  /* Анимации */
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+.section-contacts-btn:hover {
+  /* Анимация */
+  transform: scale(1.1, 1.1);
+}
+
+/* Секция Напишите нам */
+.section-write {
+  /* Блочная модель */
+  margin-top: 110px;
+  margin-left: 178px;
+}
+
+.section-write-title {
+  /* Блочная модель */
+  margin-left: 50px;
+}
+
+.section-write-input {
+  /* Блочная модель */
+  width: 369px;
+  height: 70px;
+  margin-bottom: 23px;
+  padding-left: 20px;
+}
+
+.section-write-text {
+  /* Блочная модель */
+  height: 110px;
+}
+
+.section-write-btn {
+  /* Блочная модель */
+  width: 369px;
+  height: 70px;
+  border-radius: 12px;
+  border: 0;
+
+  /* Типографика */
+  color: #fff;
+  font-weight: 700;
+
+  /* Анимации */
+  transition-duration: .5s;
+  transition-timing-function: linear;
+}
+
+.section-write-btn:hover {
+  /* Блочная модель */
+  border: 1px solid #cc9933;
+
+  /* Типографика */
+  color: #cc9933;
+
+  /* Оформление */
+  background-color: #fff;
+}
+
+/* Секция Футер */
+.section-footer {
+  /* Блочная модель */
+  display: flex;
+  height: 338px;
+  margin-bottom: 52px;
+  padding: 48px 52px;
+  border-radius: 12px;
+
+  /* Оформление */
+  background-color: #333;
+  background-image: url('../img/logo2.png');
+  background-repeat: no-repeat;
+  background-position: 732px 110px;
+}
+
+.section-footer-description {
+  /* Блочная модель */
+  width: 300px;
+}
+
+.section-footer-copyright {
+  /* Блочная модель */
+  margin: 0;
+}
+
+.section-footer-text {
+  /* Блочная модель */
+  margin-bottom: 48px;
+}
+
+.section-footer-text-2 {
+  /* Блочная модель */
+  margin-bottom: 30px;
+  line-height: 32px;
+}
+
+.section-footer-information {
+  margin-left: 128px;
+}
+
+.section-footer-address {
+  /* Блочная модель */
+  margin: 0;
+  margin-bottom: 40px;
+}
+
+.section-footer-phone-block {
+  /* Блочная модель */
+  width: 155px;
+  margin-bottom: 30px;
+}
+
+.section-footer-mail-block {
+  /* Блочная модель */
+  width: 135px;
+}
+
+.footer-social-list {
+  /* Блочная модель */
+  margin-left: auto;
+}
+
+.footer-social-item:not(:last-child) {
+  /* Блочная модель */
+  margin-bottom: 21px;
+}
+
+.footer-social-icon {
+  /* Блочная модель */
+  display: inline-block;
+
+  /* Оформление */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+
+.tripadvisor {
+  /* Блочная модель */
+  width: 25px;
+  height: 25px;
+
+  /* Оформление */
+  background-image: url('../img/tripadvisor.png');
+}
+
+.twitter {
+  /* Блочная модель */
+  width: 24px;
+  height: 24px;
+
+  /* Оформление */
+  background-image: url('../img/twitter.png');
+}
+
+.facebook {
+  /* Блочная модель */
+  width: 24px;
+  height: 24px;
+
+  /* Оформление */
+  background-image: url('../img/facebook.png');
+}
+
+.vk {
+  /* Блочная модель */
+  width: 24px;
+  height: 24px;
+
+  /* Оформление */
+  background-image: url('../img/vk.png');
+}
+
+.google {
+  /* Блочная модель */
+  width: 25px;
+  height: 25px;
+  
+  /* Оформление */
+  background-image: url('../img/google.png');
+}
+
+/* Общие цвета */
+.color-btn {
+  /* Оформление */
+  background-color: var(--background-color-orange);
+}
+
+.text-color {
+  /* Типографика */
+  color: var(--color-orange);
+}
+
+.background-color-white {
+  /* Оформление */
+  background-color: var(--background-color-white);
+}
+
+.text-color-white {
+  /* Типографика */
+  color: var(--color-white);
+}
